@@ -1,0 +1,12 @@
+{
+  "name": "wink",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.extend.yml"
+  ],
+  "service": "dart",
+  "workspaceFolder": "/app",
+  "appPort": 8080,
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "pub global activate webdev && cd /app && pub get && source set_path.sh"
+}
